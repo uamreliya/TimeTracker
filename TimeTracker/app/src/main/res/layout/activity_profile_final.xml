@@ -1,0 +1,347 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.uamre.timetracker.ProfileFinal"
+    android:orientation="vertical"
+    android:background="#f1f1f1">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/photo"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ivProfile"
+            >
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvFullName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tvFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NAME"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:id="@+id/tvShowFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Udit Amreliya"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvBirthday"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/cvFullName"
+                android:layout_marginTop="1dp"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvBirthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="BIRTHDAY"
+                        android:textColor="#000000"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/tvShowBirthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="24-07-1995"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvAddress1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/cvBirthday"
+                android:layout_marginTop="1dp"
+                android:clickable="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvAddress1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address Line 1"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:id="@+id/tvShowAddress1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A-7 Divya Apartment"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvAddress2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/cvAddress1"
+                android:layout_marginTop="1dp"
+                android:clickable="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvAddress2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Address Line 2"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="17sp"
+                            android:layout_marginTop="15dp"
+                            android:textColor="#000000"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tvShowAddress2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Opp. Atithi dining hall lane"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="15sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvZip"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/cvAddress2"
+                android:layout_marginTop="1dp"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvZip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ZIP"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:id="@+id/tvShowzip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="380054"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"/>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvCity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/cvZip"
+                android:layout_marginTop="1dp"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="City"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:id="@+id/tvShowCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ahmedabad"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"/>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvState"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/cvCity"
+                android:layout_marginTop="1dp"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="State"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:id="@+id/tvShowState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gujarat"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"/>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvCountry"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/cvState"
+                android:layout_marginTop="1dp"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Country"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:id="@+id/tvShowCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="India"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"/>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/cvCountry"
+                android:layout_marginTop="1dp"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="17sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:id="@+id/tvShowPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7567107717"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="15sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"/>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>
