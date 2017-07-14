@@ -32,7 +32,7 @@ public class ImageUpload extends AppCompatActivity implements View.OnClickListen
     CircleImageView circleImageViewUploadPhoto;
     Button buttonChooseImage,buttonUpload;
     TextView textViewSkip;
-    private String uploadUrl = "https://uamreliya.000webhostapp.com/Time Tracker/upload.php";
+
     private Uri filepath;
     private Bitmap bitmap;
     @Override
@@ -132,7 +132,7 @@ public class ImageUpload extends AppCompatActivity implements View.OnClickListen
         try{
             String uploadId = UUID.randomUUID().toString();
 
-            new MultipartUploadRequest(this,uploadId,uploadUrl).addFileToUpload(path,"image").addParameter("name",name).addParameter("email",email)
+            new MultipartUploadRequest(this,uploadId,Constants.UPLOAD_URL).addFileToUpload(path,"image").addParameter("name",name).addParameter("email",email)
                     .setNotificationConfig(new UploadNotificationConfig())
                     .setMaxRetries(2)
                     .startUpload();

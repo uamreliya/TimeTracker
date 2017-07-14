@@ -95,9 +95,23 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
             if (email.isEmpty() || !validateEmail(email)) {
                 editTextEmail.setError("Not a valid email address!");
             }
-            else if(password.length()<5 && !validatePassword(password)){
+            else if(password.length()<5 || !validatePassword(password) || password.isEmpty()){
                 tilRegisterPasswordWrapper.setPasswordVisibilityToggleEnabled(false);
                 editTextPassword.setError("Not a valid password!");
+            }
+            else if(email.isEmpty() && password.isEmpty() && FirstName.isEmpty() && LastName.isEmpty()){
+                editTextEmail.setError("Email can not be blank");
+                editTextPassword.setError("Password can not be blank");
+                editTextFirstName.setError("First name can not be blank");
+                editTextLastName.setError("Last name can not be blank");
+            }
+            else if(email.isEmpty() && password.isEmpty()){
+                editTextEmail.setError("Email can not be blank");
+                editTextPassword.setError("Password can not be blank");
+            }
+            else if(FirstName.isEmpty() && LastName.isEmpty()){
+                editTextFirstName.setError("First name can not be blank");
+                editTextLastName.setError("Last name can not be blank");
             }
             else if(TextUtils.isEmpty(FirstName)){
                 editTextFirstName.setError("First name can not be empty.");
@@ -106,7 +120,6 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                 editTextLastName.setError("Last name can not be empty.");
             }
             else{
-
                 createUser(email,password,FirstName,LastName);
             }
         }
